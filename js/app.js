@@ -1,5 +1,20 @@
 $(document).ready(function() {
-    for (var i = 1; i < 101; i++) {
+    $('.add').click(function() {
+        var numValue = $('.num').val();
+        if (numValue > 0 && numValue < 101) {
+            fizzbuzz(numValue);
+        } 
+        else {
+            alert("Uh oh, wrong number! Gotta choose between 1 and 100!");
+            $('.numbers').remove(numValue);
+        }
+        $('.numbers').append(numValue);
+        $('.num').val('');
+    })
+});
+
+function fizzbuzz(numValue) {
+    for (var i = 0; i < numValue; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
             $(".numbers").append("<p>fizzbuzz</p>");
         } else if (i % 3 == 0) {
@@ -10,4 +25,4 @@ $(document).ready(function() {
             $(".numbers").append("<p>" + i + "</p>");
         }
     }
-});
+};
