@@ -14,7 +14,7 @@ $(document).ready(function() {
 });
 
 function fizzbuzz(numValue) {
-    for (var i = 0; i < numValue; i++) {
+    for (var i = 0; i <= numValue; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
             $(".numbers").append("<p>fizzbuzz</p>");
         } else if (i % 3 == 0) {
