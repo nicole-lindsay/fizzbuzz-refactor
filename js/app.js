@@ -8,7 +8,7 @@ $(document).ready(function() {
             alert("Uh oh, wrong number! Gotta choose between 1 and 100!");
             $('.numbers').remove(numValue);
         }
-        $('.numbers').append(numValue);
+//previously there was an append to .numbers here, was not necessary as this code is already appending the numbers via the numValue function
         $('.num').val('');
     })
 });
